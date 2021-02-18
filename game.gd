@@ -3,6 +3,8 @@ extends Node
 var clickTotal = 0 setget setClickTotal, getClickTotal
 signal txt_changed
 
+
+
 func setClickTotal(valor):
 	clickTotal = clickTotal + valor
 func getClickTotal():
@@ -23,11 +25,12 @@ func getClickValue():
 var money = 0 setget setMoney, getMoney
 signal money_changed
 
-func setMoney(var valor = getClickValue()):
+func setMoney(valor = getClickValue()):
 	money = money + valor
 func getMoney():
 	return money
-
+func diminuirMoney(valor):
+	money = money - valor
 
 func _ready():
 	pass
